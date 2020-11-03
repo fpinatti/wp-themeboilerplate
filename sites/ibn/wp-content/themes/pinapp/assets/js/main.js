@@ -17,4 +17,20 @@ document.addEventListener("DOMContentLoaded", function() {
         ministryGrid[idx].setAttribute('data-toggle', 'modal');
         ministryGrid[idx].setAttribute('data-target', ministryGrid[idx].getAttribute('href'));
     }
+
+    //latest video
+    var latVideoWrapper = document.querySelector('.latestVideo');
+    var myRequest = new Request('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC6kD6-RCkdyeotrh6dMDW3Q&maxResults=1&order=date&type=video&key=AIzaSyAPlpbyG1VRV8uEcf3pMNpssgAhN1wpXUM');
+    fetch(myRequest)
+        .then(response => response.json())
+        .then(json => {
+            var videoId = json.items[0].id.videoId;
+            latVideoWrapper.innerHTML = `<iframe width="100%" height="315" 
+                src="https://www.youtube-nocookie.com/embed/${videoId}" 
+                frameborder="0" allow="accelerometer; 
+                autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>`;
+            
+        });
 });
