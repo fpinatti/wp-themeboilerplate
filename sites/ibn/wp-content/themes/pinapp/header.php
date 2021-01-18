@@ -8,10 +8,9 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		
 		<div class="container-fluid">
 			<div class="row">
-				<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+				<nav class="main-navigation fixed-top">
 					<a class="navbar-brand" href="<?php echo(get_site_url()); ?>">
 						<img class="navbar-logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 						<!-- <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""> -->
@@ -19,7 +18,7 @@
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="navbar-collapse" id="navbarNav">
 						<?php 
 							wp_nav_menu(array(
 								'theme_location' => 'primary',
