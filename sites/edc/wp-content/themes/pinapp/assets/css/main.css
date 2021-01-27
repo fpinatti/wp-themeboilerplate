@@ -1,0 +1,127 @@
+/* GLOBAL */
+.container-fluid {
+    margin: 0;
+}
+body {
+    padding-top: 170px;
+}
+
+footer {
+    background-color: green;
+}
+.navbar-logo {
+    max-width: 100px;
+    height: auto;
+}
+.navbar {
+    background-color: yellow;
+}
+.menu-item {
+    margin-right: 12px;
+}
+.mainnav__menu {
+    padding: 0;
+    display: flex;
+}
+.mainnav__menu .menu-item {
+    list-style: none;
+    margin-right: 12px;
+}
+.socialnav {
+
+}
+.socialnav__menu {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+.socialnav__icon {
+    margin-right: 18px;
+}
+.socialnav__icon:last-child {
+    margin-right: 0;
+}
+
+
+/* HEADER */
+.main-header {
+    background-color: #fff;
+        display: flex;
+      flex-wrap: wrap;
+  }
+  .header-logo {
+    background-color: purple;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
+  .top-main-nav-wrapper {
+    background-color: darkgrey;
+      width: 100%;
+  }
+  .top-main-nav {
+      display: flex;
+      justify-content: flex-end;
+  }
+  .max-width-wrapper {
+    max-width: 600px;
+        width: 100%;
+      display: flex;
+      margin: 0 auto;
+      background-color: yellow;
+  }
+  .header-contact {
+    background-color: pink;
+    margin-left: auto;
+  }
+  .header-right-column {
+    margin-left: auto;
+      display: flex;
+  }
+
+  
+
+  /* FOOTER */
+  .max-width-wrapper {
+    max-width: 600px;
+        width: 100%;
+      display: flex;
+      margin: 0 auto;
+      background-color: yellow;
+  }
+  
+  .main-footer {
+    background-color: grey;
+        display: flex;
+        justify-content: space-between;
+  }
+  .logo-footer {
+    background-color: purple;
+    flex-grow: 1;
+  }
+  .column-center {
+    background-color: pink;
+    flex-grow: 1;
+        padding: 0 20px;
+  }
+  .column-right {
+    background-color: green;
+    flex-grow: 1;
+  }
+  .footer-main-nav {
+        columns: 2;
+  }
+  .footer-nav-menu-item {
+        display: block;
+  }
+  .footer-small-box-columns {
+        display: flex;
+      flex-wrap: wrap;
+  }
+
+  
+
+
+
+  
+/* HOME */

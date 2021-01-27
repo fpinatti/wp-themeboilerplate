@@ -164,3 +164,47 @@ footer {
 .latestVideo iframe::before {
     padding-top: 50%;
 }
+
+
+
+/* HEADER */
+.top-main-nav-wrapper {
+    background-color: darkgrey;
+      width: 100%;
+  }
+  .top-main-nav {
+      display: flex;
+      justify-content: flex-end;
+  }
+  .max-width-wrapper {
+    max-width: 600px;
+        width: 100%;
+      display: flex;
+      margin: 0 auto;
+      background-color: yellow;
+  }
+  .header-contact {
+    background-color: pink;
+    margin-left: auto;
+  }
+  .header-right-column {
+    margin-left: auto;
+      display: flex;
+      flex-wrap: wrap;
+          justify-content: center;
+      text-align: center;
+  }
+  .header-logo {
+    background-color: purple;
+    width: 100px;
+    height: 100px;
+  }
+  .main-header {
+    
+  }
+  .main-header-middle {
+        align-items: center;
+  }
+  .header-social-icons {
+    
+  }

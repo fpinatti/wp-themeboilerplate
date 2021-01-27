@@ -81,3 +81,43 @@
 				</div> -->
 			</div>
 		</div><!-- .container -->
+
+
+
+
+
+
+		<!-- HEADER MARKUP
+		<header class="main-header">
+	<div class="max-width-wrapper main-header-middle">
+		<div class="header-logo">
+
+		</div>
+    	<nav class="top-main-nav">
+			<a href=# class="nav-menu-item">Menu item 1</a>
+			<a href=# class="nav-menu-item">Menu item 1</a>
+			<a href=# class="nav-menu-item">Menu item 1</a>
+			<a href=# class="nav-menu-item">Menu item 1</a>
+			<a href=# class="nav-menu-item">Menu item 1</a>
+			<a href=# class="nav-menu-item">Menu item 1</a>
+		</nav>
+    
+		<div class="header-right-column">
+			<ul class="header-social-icons">
+				<li><a href=#>img facebook</a></li>
+				<li><a href=#>img facebook</a></li>
+				<li><a href=#>img facebook</a></li>
+			</ul>
+
+			<div class="headline-contact">
+				<div>
+					logo 
+				</div>
+				19. 91322.2312
+			</div>
+		</div>
+	</div>
+	
+
+
+</header> -->
