@@ -47,6 +47,11 @@ add_theme_support('post-thumbnails');
 add_theme_support('post-formats',array('aside','image','video'));
 add_theme_support('html5',array('search-form'));
 
+
+add_image_size('large-img', 1000, 702);
+add_image_size('medium-img', 700, 372);
+add_image_size('small-img', 300, 200);
+
 /*
 	==========================================
 	 Sidebar function
