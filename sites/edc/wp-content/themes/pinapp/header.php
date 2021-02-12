@@ -1,125 +1,84 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
-	<head>
-		<meta charset="<?php bloginfo('charset'); ?>">
-		<title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
-		<meta name="description" content="<?php bloginfo('description'); ?>">
-		<?php wp_head(); ?>
-	</head>
 
-	<body <?php body_class(); ?>>
-		<div class="container-fluid">
-			<div class="row">
-				<nav class="main-navigation fixed-top">
-					<a class="navbar-brand" href="<?php echo(get_site_url()); ?>">
-						<img class="navbar-logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-						<!-- <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""> -->
-					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="navbar-collapse" id="navbarNav">
-						<?php 
-							wp_nav_menu(array(
-								'theme_location' => 'primary',
-								'container' => false,
-								'menu_class' => 'navbar-nav' 
-							));
-						?>
-						<nav class="socialnav__menu col-12 socialnav d-block d-lg-none p-0 mt-3">
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-						</nav>
-						<a href="#" class="col-12 d-block d-lg-none p-0">
-							19. 99184.3745
-						</a>
+<head>
+	<meta charset="<?php bloginfo('charset'); ?>">
+	<title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
+	<meta
+		name="description"
+		content="<?php bloginfo('description'); ?>"
+	>
+	<?php wp_head(); ?>
+	<link
+		rel="preconnect"
+		href="https://fonts.gstatic.com"
+	>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@200;400;700;900&display=swap"
+		rel="stylesheet"
+	>
+</head>
+
+<body <?php body_class(); ?>>
+
+	<!-- EDC markup -->
+	<header class="main-header">
+		<div class="max-width-wrapper">
+			<div class="nav-top-wrapper justify-content-center align-items-start align-items-md-center pb-3 pb-md-0">
+				<a href="<?php echo(get_site_url()); ?>">
+					<img
+						class="header-top-logo"
+						src="<?php header_image(); ?>"
+						alt=""
+					/>
+				</a>
+
+				<img
+					src="<?php echo(get_template_directory_uri()); ?>/assets/img/sandwich-icon.png"
+					class="sandwich-icon d-md-none"
+				/>
+				<div class="header-right-column">
+					<div class="header-contact d-flex mr-3 align-items-center">
+						<img
+							src="<?php echo(get_template_directory_uri()); ?>/assets/img/WhatsApp.png"
+							class="social-icon m-2"
+						/>
+						<div>
+							<strong>estamos no whatsapp</strong><br />
+							19. 91322.2312
+						</div>
+
+
 					</div>
-					<div class="col-2 socialnav d-none d-lg-block">
-						<nav class="socialnav__menu">
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
+					<div class="header-contact d-flex flex-wrap justify-content-center align-items-center">
+						<strong>nossas redes sociais</strong>
+						<nav class="text-center w-100">
+							<a href=#><img
+									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.png"
+									class="social-icon"
+								/></a>
+							<a href=#><img
+									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.png"
+									class="social-icon"
+								/></a>
+							<a href=#><img
+									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.png"
+									class="social-icon"
+								/></a>
 						</nav>
-						<a href="#">19. 99184.3745</a>
 					</div>
-				</nav>
-			
-
-				<!-- <div class="col-2">
-					<a href="#" class="mainnav__logo">Logo here</a>
 				</div>
-				<nav class="mainnav col-8">
-					<?php 
-						wp_nav_menu(array(
-							'theme_location' => 'primary',
-							'container' => false,
-							'menu_class' => 'mainnav__menu'
-							)
-						);
-					?>
-				</nav>
-				<div class="col-2 socialnav text-center">
-					<nav class="socialnav__menu">
-						<a href="#" class="socialnav__icon"></a>
-						<a href="#" class="socialnav__icon"></a>
-						<a href="#" class="socialnav__icon"></a>
-					</nav>
-					<a href="#">19. 99184.3745</a>
-				</div> -->
-			</div>
-		</div><!-- .container -->
-
-
-
-
-
-		<!-- EDC markup
-		<header class="main-header">
-	<div class="max-width-wrapper">
-		<div class="header-logo">
-
-		</div>
-		<div class="header-right-column">
-			<div class="header-contact ">
-				<div>
-					logo 
-				</div>
-				<strong>estamos no whatsapp</strong><br />
-				19. 91322.2312
-			</div>
-			<div class="header-contact">
-				nossas redes sociais
-				<ul>
-					<li><a href=#>img facebook</a></li>
-					<li><a href=#>img facebook</a></li>
-					<li><a href=#>img facebook</a></li>
-				</ul>
 			</div>
 		</div>
-	</div>
-	
-	<div class="top-main-nav-wrapper">
-		<nav class="top-main-nav max-width-wrapper">
-			<a href=# class="nav-menu-item">Menu item 1</a>
-			<a href=# class="nav-menu-item">Menu item 1</a>
-			<a href=# class="nav-menu-item">Menu item 1</a>
-			<a href=# class="nav-menu-item">Menu item 1</a>
-			<a href=# class="nav-menu-item">Menu item 1</a>
-			<a href=# class="nav-menu-item">Menu item 1</a>
-		</nav>
-	</div>
 
-</header> -->
+		<div class="top-main-nav-wrapper d-none d-md-flex">
+			<?php 
+				wp_nav_menu(array(
+					'theme_location' => 'primary',
+					'container' => false,
+					'menu_class' => 'top-main-nav max-width-wrapper text-right justify-content-end d-md-flex' 
+				));
+			?>
+		</div>
+
+	</header>

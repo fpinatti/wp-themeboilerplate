@@ -43,9 +43,38 @@ add_action('init', 'pinapp_theme_setup');
 */
 add_theme_support('custom-background');
 add_theme_support('custom-header');
-add_theme_support('post-thumbnails');
-add_theme_support('post-formats',array('aside','image','video'));
-add_theme_support('html5',array('search-form'));
+add_theme_support('post-formats',array(
+	'link',
+	'aside',
+	'gallery',
+	'image',
+	'quote',
+	'status',
+	'video',
+	'audio',
+	'chat',
+));
+add_theme_support('html5',array(
+	'comment-form',
+	'comment-list',
+	'gallery',
+	'caption',
+	'style',
+	'script',
+	'navigation-widgets',
+));
+add_theme_support ('align-wide');
+add_theme_support( 'post-thumbnails' );
+add_theme_support( 'wp-block-styles' );
+add_theme_support( 'editor-styles' );
+set_post_thumbnail_size( 1568, 9999 );
+add_theme_support( 'responsive-embeds' );
+// Add support for custom line height controls.
+add_theme_support( 'custom-line-height' );
+// Add support for experimental link color control.
+add_theme_support( 'experimental-link-color' );
+// Add support for experimental cover block spacing.
+add_theme_support( 'custom-spacing' );
 
 /*
 	==========================================
@@ -69,6 +98,18 @@ function pinapp_widget_setup() {
 	
 }
 add_action('widgets_init','pinapp_widget_setup');
+
+/*
+	==========================================
+	 Images
+	==========================================
+*/
+function remove_dimension_attribute($html) {
+	$html = preg_replace('/(width|height)="\d*"\s/', "", $html);
+	return $html;
+}
+add_filter('post_thumbnail_html', 'remove_dimension_attribute', 10);
+add_filter('image_send_to_editor', 'remove_dimension_attribute', 10);
 
 /*
 	==========================================

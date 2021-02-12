@@ -5,14 +5,11 @@
 get_header(); ?>
 
 <div class="container blog-wrapper">
-	<div class="row">
-		<div class="col-12">
 
 			<?php 
 				$args = array(
 					'type' => 'post',
 					'posts_per_page' => '-1',
-					'category__in' => array(6),
 					'orderby' => 'date',
 					'order' => 'ASC'
 				);
@@ -45,23 +42,11 @@ get_header(); ?>
 						
 						<hr>
 						
-						<!-- <div class="row">
-							<div class="col-6 text-left"><?php previous_post_link(); ?></div>
-							<div class="col-6 text-right"><?php next_post_link(); ?></div>
-						</div> -->
 					</article>
 					<?php endwhile; ?>
 
-					<div class="col-xs-6 text-left">
-					<?php next_posts_link('« Older Posts'); ?>
-					</div>
-					<div class="col-xs-6 text-right">
-					<?php previous_posts_link('Newer Posts »'); ?>
-					</div>
 				<?php endif;
 				wp_reset_postdata();
 			?>
-		</div>
-	</div>
 </div>
 <?php get_footer(); ?>
