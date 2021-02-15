@@ -39,33 +39,6 @@
 					'menu_class' => 'top-main-nav alt-font font-weight-bold' 
 				));
 			?>
-			<!-- <nav class="top-main-nav justify-content-md-end d-none d-md-flex alt-font">
-				<a
-					href=#
-					class="nav-menu-item"
-				>Menu item 1</a>
-				<a
-					href=#
-					class="nav-menu-item active"
-				>Menu item 1</a>
-				<a
-					href=#
-					class="nav-menu-item"
-				>Menu item 1</a>
-				<a
-					href=#
-					class="nav-menu-item"
-				>Menu item 1</a>
-				<a
-					href=#
-					class="nav-menu-item"
-				>Menu item 1</a>
-				<a
-					href=#
-					class="nav-menu-item"
-				>Menu item 1</a>
-			</nav> -->
-
 			<div class="header-right-column justify-content-center d-md-flex position-relative">
 				<button class="sandwich-icon d-inline-block d-md-none m-0 p-0"><img
 						src="<?php echo(get_template_directory_uri()); ?>/assets/img/hamburguer.svg"
@@ -96,7 +69,7 @@
 				</nav>
 
 				<div class="headline-contact">
-					<span class="header-phone d-flex align-items-md-center">19. 91322.2312</span>
+					<span class="header-phone d-flex align-items-md-center alt-font">19. 91322.2312</span>
 				</div>
 			</div>
 		</div>
@@ -104,53 +77,3 @@
 
 
 	</header>
-	<!-- <div class="container-fluid">
-			<div class="row">
-				<nav class="main-navigation fixed-top">
-					<a class="navbar-brand" href="<?php echo(get_site_url()); ?>">
-						<img class="navbar-logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="navbar-collapse" id="navbarNav">
-						<?php 
-							wp_nav_menu(array(
-								'theme_location' => 'primary',
-								'container' => false,
-								'menu_class' => 'navbar-nav' 
-							));
-						?>
-						<nav class="socialnav__menu col-12 socialnav d-block d-lg-none p-0 mt-3">
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-						</nav>
-						<a href="#" class="col-12 d-block d-lg-none p-0">
-							19. 99184.3745
-						</a>
-					</div>
-					<div class="col-2 socialnav d-none d-lg-block">
-						<nav class="socialnav__menu">
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-							<a href="#" class="socialnav__icon">
-								<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/icon_facebook.png"/>
-							</a>
-						</nav>
-						<a href="#">19. 99184.3745</a>
-					</div>
-				</nav>
-	
-			</div>
-		</div> -->

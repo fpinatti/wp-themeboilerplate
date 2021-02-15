@@ -15,6 +15,28 @@ body.custom-background {
 	font-family: 'Concert One', cursive;
 }
 
+.title-section {
+	font-size: 32px;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 10px -20px;
+    font-family: 'Concert One', cursive;
+	display: flex;
+    align-items: baseline;
+	color: var(--gray-dark);
+}
+.title-section::after {
+	content: " ";
+	background-image: url(../img/wooden.png);
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: 15px;
+}
+
 /* HEADER */
 .menu-item {
 	list-style: none;
@@ -275,7 +297,7 @@ body.custom-background {
 .wp-block-button {
 	min-height: 60px;
 }
-.wp-block-button__link {
+.wp-block-button__link, .btn {
 	position: relative;
 	padding: 10px 40px;
 	border-radius: 100px;
@@ -291,10 +313,17 @@ body.custom-background {
 	font-family: 'Concert One', cursive;
 	font-size: 18px;
 }
-.wp-block-button__link:active {
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--danger);
+    border-color: #A20B0B;
+    text-decoration: underline;
+}
+.wp-block-button__link:active, .btn:active {
 	transform: translate(0px, 5px);
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
+	background-color: var(--danger) !important;
 }
 
 .bg-landing {
@@ -381,6 +410,14 @@ body.custom-background {
 
 
 @media (min-width: 768px) {
+
+	.title-section {
+		font-size: 40px;
+	}
+	.title-section::after {
+
+	}
+
 	body.scroll-down .header-top-logo {
 		max-width: 70px;
 		transform: translateY(0px);
@@ -425,6 +462,19 @@ body.custom-background {
 	}
 	.top-main-nav .menu-item.current_page_item {
 		background-color: var(--fill);
+	}
+	.top-main-nav .menu-item.current_page_item a::before {
+		content: " ";
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		height: 50px;
+		width: 100%;
+		text-align: center;
+		background-image: url(../img/roof.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center bottom;
 	}
 	.top-main-nav .menu-item a {
 		height: 100%;
