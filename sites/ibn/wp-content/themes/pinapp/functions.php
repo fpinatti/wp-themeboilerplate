@@ -88,6 +88,17 @@ function posts_link_prev_class($format) {
 add_filter('previous_post_link', 'posts_link_prev_class');
 
 
+
+
+
+function remove_img_attr ($html) {
+    return preg_replace('/(width|height)="\d+"\s/', "", $html);
+}
+
+add_filter( 'post_thumbnail_html', 'remove_img_attr' );
+add_filter( 'image_send_to_editor', 'remove_img_attr', 10 );
+
+
 /*
 	==========================================
 	 Sidebar function

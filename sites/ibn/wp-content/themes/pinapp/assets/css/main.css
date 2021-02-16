@@ -102,7 +102,7 @@ body {
 .menu-item a {
 	color: var(--dark);
 }
-.menu-item.active::after {
+.menu-item.current-menu-item::after {
 	content: " ";
 	width: 100%;
 	background-color: red;
