@@ -3,8 +3,11 @@
 			class="position-absolute w-100 d-flex align-items-end justify-content-between cmw-1200 mx-auto"
 			style="transform: translate(-50%, -100%);left: 50%;"
 		>
-			<div>
-				<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-kid.png" />
+			<div class="align-items-end d-flex">
+				<img
+					class="footer-mom-kid"
+					src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-kid.png"
+				/>
 				<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-mom.png" />
 			</div>
 			<div>
