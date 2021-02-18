@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				block: 'start',
 				behavior: 'smooth'
 			});
+			mainHeader.classList.remove('open');
 		}
 	};
 
@@ -111,6 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		
 		
 	};
+
+
+	//REMOVE width/height images
+	const imgs = document.querySelectorAll('.wp-block-image img');
+	imgs.forEach(img => {
+		// img.removeAttribute('width');
+		// img.removeAttribute('height');
+	});
 
 	// let options = {
 	// 	root: document.querySelector('#scrollArea'),
