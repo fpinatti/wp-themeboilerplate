@@ -34,13 +34,13 @@
 				</a>
 
 				<img
-					src="<?php echo(get_template_directory_uri()); ?>/assets/img/sandwich-icon.png"
+					src="<?php echo(get_template_directory_uri()); ?>/assets/img/hamburguer.svg"
 					class="sandwich-icon d-md-none"
 				/>
 				<div class="header-right-column">
 					<div class="header-contact d-flex mr-3 align-items-center">
 						<img
-							src="<?php echo(get_template_directory_uri()); ?>/assets/img/WhatsApp.png"
+							src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-whatsApp.svg"
 							class="social-icon m-2"
 						/>
 						<div>
@@ -54,15 +54,15 @@
 						<strong>nossas redes sociais</strong>
 						<nav class="text-center w-100">
 							<a href=#><img
-									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.png"
+									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.svg"
 									class="social-icon"
 								/></a>
 							<a href=#><img
-									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.png"
+									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-instagram.svg"
 									class="social-icon"
 								/></a>
 							<a href=#><img
-									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.png"
+									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-youTube.svg"
 									class="social-icon"
 								/></a>
 						</nav>

@@ -330,15 +330,15 @@ body.custom-background {
 	background-image: url(../../../../uploads/2021/02/banner-hero-md.png);
 }
 .texture1 {
-	background-image: url(../img/texture-card-1.png);
+	background-image: url(../img/texture-color-1.svg);
 }
 .texture2 {
-	background-image: url(../img/texture-card-2.png);
+	background-image: url(../img/texture-color-2.svg);
 }
 
 .img-edge-1::after {
 	content: " ";
-	background-image: url(../img/edge-mask-1.png);
+	background-image: url(../img/horizontal-divider-1.svg);
 	display: block;
     width: 100%;
     padding-top: 13%;
@@ -351,7 +351,7 @@ body.custom-background {
 
 .img-edge-2::after {
 	content: " ";
-	background-image: url(../img/edge-mask-2.png);
+	background-image: url(../img/horizontal-divider-2.svg);
 	display: block;
     width: 100%;
     padding-top: 13%;
@@ -570,7 +570,7 @@ body.custom-background {
 	}
 
 	.img-edge-1::after {
-		background-image: url(../img/edge-mask-vertical-1.png);
+		background-image: url(../img/vertical-divider-1.svg);
 		width: auto;
 		height: 100%;
 		bottom: auto;
@@ -580,7 +580,7 @@ body.custom-background {
 		background-position: left center;
 	}
 	.img-edge-2::after {
-		background-image: url(../img/edge-mask-vertical-2.png);
+		background-image: url(../img/vertical-divider-2.svg);
 		width: auto;
 		height: 100%;
 		padding-left: 4.5%;

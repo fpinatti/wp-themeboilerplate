@@ -6,12 +6,12 @@
 			<div class="align-items-end d-flex">
 				<img
 					class="footer-mom-kid"
-					src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-kid.png"
+					src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-kid.svg"
 				/>
-				<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-mom.png" />
+				<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-mommy.svg" />
 			</div>
 			<div>
-				<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-family.png" />
+				<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-family.svg" />
 			</div>
 		</div>
 		<div
@@ -36,7 +36,7 @@
 					<div class="footer-small-box-left">
 						<a href=#>
 							<img
-								src="<?php echo(get_template_directory_uri()); ?>/assets/img/WhatsApp.png"
+								src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-whatsApp.svg"
 								class="social-icon mb-3 mr-md-2"
 							/>
 						</a>
@@ -51,7 +51,7 @@
 				<div class="footer-small-box-columns mb-4 justify-content-center">
 					<div class="footer-small-box-left">
 						<a href=#><img
-								src="<?php echo(get_template_directory_uri()); ?>/assets/img/WhatsApp.png"
+								src="<?php echo(get_template_directory_uri()); ?>/assets/img/location.svg"
 								class="social-icon mb-3 mr-md-2"
 							/></a>
 					</div>
@@ -69,14 +69,14 @@
 						href=#
 						class="mr-3 d-flex align-items-center mb-md-4 text-white"
 					><img
-							src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.png"
+							src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-instagram.svg"
 							class="social-icon mr-2"
 						/> espacodacrianca</a>
 					<a
 						href=#
 						class="d-flex align-items-center text-white"
 					><img
-							src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.png"
+							src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.svg"
 							class="social-icon mr-2"
 						/> espacodacrianca</a>
 				</nav>
