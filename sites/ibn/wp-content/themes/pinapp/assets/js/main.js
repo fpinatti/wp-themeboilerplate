@@ -55,11 +55,16 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (tSection === 'ministerios') {
 				btnKnowMoreChurch.dispatchEvent(new MouseEvent('click'));
 			}
-			targetSection.scrollIntoView({
-				inline: 'nearest',
-				block: 'start',
+
+			window.scrollTo({
+				top: targetSection.getBoundingClientRect().top + window.pageYOffset - 170,
 				behavior: 'smooth'
 			});
+			// targetSection.scrollIntoView({
+			// 	inline: 'nearest',
+			// 	block: 'start',
+			// 	behavior: 'smooth'
+			// });
 			mainHeader.classList.remove('open');
 		}
 	};
@@ -114,12 +119,34 @@ document.addEventListener("DOMContentLoaded", function () {
 	};
 
 
-	//REMOVE width/height images
-	const imgs = document.querySelectorAll('.wp-block-image img');
-	imgs.forEach(img => {
-		// img.removeAttribute('width');
-		// img.removeAttribute('height');
+	//replace all figures with picture
+	const figures = document.querySelectorAll('figure.responsive img');
+	figures.forEach(img => {
+		const pictureElement = document.createElement('picture');
+		const source1Element = document.createElement('source');
+		const source2Element = document.createElement('source');
+		const imgElement = document.createElement('img');
+		const src = img.getAttribute('src');
+		pictureElement.className = img.parentNode.classList.toString();
+		source1Element.srcset = src;
+		source1Element.media = '(max-width: 767px)';
+		source2Element.srcset = getLargeImg(src);
+		source2Element.media = '(min-width: 768px)';
+		imgElement.src = src;
+		imgElement.alt = img.getAttribute('alt');
+		pictureElement.appendChild(source1Element);
+		pictureElement.appendChild(source2Element);
+		pictureElement.appendChild(imgElement);
+		img.parentNode.replaceWith(pictureElement);
 	});
+
+	function getLargeImg(src) {
+		let filename = src.substring(src.lastIndexOf('/')+1);
+		let pathname = src.substring(0,src.lastIndexOf('/'));
+		filename = filename.split('.');
+		filename = filename[0] + '-md.' + filename[1];
+		return pathname + '/' + filename;
+	}
 
 	// let options = {
 	// 	root: document.querySelector('#scrollArea'),

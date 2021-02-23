@@ -1,29 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-	const btnSandwich = document.querySelector('.sandwich-icon');
+	const btnSandwichOpen = document.querySelector('.icon-sandwich');
+	const btnSandwichClose = document.querySelector('.icon-sandwich-back');
 	const mainHeader = document.querySelector('.main-header');
 	const mainBody = document.querySelector('body');
-	const toggleMenu = () => {
-
-		mainHeader.classList.toggle('open');
+	let pageScroll = 0;
+	const openMenu = () => {
+		mainHeader.classList.add('open');
+	};
+	const closeMenu = () => {
+		mainHeader.classList.remove('open');
 	};
 
-	btnSandwich.addEventListener('click', toggleMenu);
+	btnSandwichOpen.addEventListener('click', openMenu);
+	btnSandwichClose.addEventListener('click', closeMenu);
 
 
 
 	const momkid = document.querySelector('.footer-mom-kid');
-	window.addEventListener('mousewheel', function(evt) {
-        if (evt.deltaY > 0) {
-			mainBody.classList.add('scroll-down');
+	window.addEventListener('scroll', function(evt) {
+		if (window.scrollY > pageScroll) {
+			if (pageScroll >= 300) {
+				mainBody.classList.add('scroll-down');
+			}
 		} else {
 			mainBody.classList.remove('scroll-down');
 		}
-		var kidx = (momkid.getBoundingClientRect().bottom) / 10;
-		kidx = Math.max(0, kidx);
-		console.log(kidx);
-		momkid.style.transform = 'translateX(' + kidx + 'px)';
+		pageScroll = window.scrollY;
+        console.log(momkid.getBoundingClientRect().top - mainBody.getBoundingClientRect().top);
+		// var kidx = (momkid.getBoundingClientRect().bottom) / 10;
+		// kidx = Math.max(0, kidx);
+		// //console.log(kidx);
+		// momkid.style.transform = 'translateX(' + kidx + 'px)';
 	});
 
 

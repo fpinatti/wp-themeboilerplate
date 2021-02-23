@@ -32,38 +32,45 @@
 						alt=""
 					/>
 				</a>
-
-				<img
-					src="<?php echo(get_template_directory_uri()); ?>/assets/img/hamburguer.svg"
-					class="sandwich-icon d-md-none"
-				/>
+				<a href=#>
+					<img
+						src="<?php echo(get_template_directory_uri()); ?>/assets/img/hamburguer.svg"
+						class="menu-mobile-icon icon-sandwich d-md-none position-absolute"
+					/>
+				</a>
+				<a href=#>
+					<img
+						src="<?php echo(get_template_directory_uri()); ?>/assets/img/back-button.svg"
+						class="menu-mobile-icon icon-sandwich-back d-md-none position-absolute"
+					/>
+				</a>
 				<div class="header-right-column">
-					<div class="header-contact d-flex mr-3 align-items-center">
+					<div class="header-contact d-flex mr-3 align-items-center align-items-md-start">
 						<img
 							src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-whatsApp.svg"
-							class="social-icon m-2"
+							class="mt-md-2 mr-2"
 						/>
 						<div>
-							<strong>estamos no whatsapp</strong><br />
-							19. 91322.2312
+							<span class="fs-12 alt-font">estamos no whatsapp</span><br />
+							<span class="fs-14">19. 91322.2312</span>
 						</div>
 
 
 					</div>
-					<div class="header-contact d-flex flex-wrap justify-content-center align-items-center">
-						<strong>nossas redes sociais</strong>
+					<div class="header-contact d-flex flex-wrap justify-content-center align-items-center align-items-md-start">
+						<span class="fs-12 alt-font mb-2">nossas redes sociais</span>
 						<nav class="text-center w-100">
 							<a href=#><img
 									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.svg"
-									class="social-icon"
+									class="mr-1"
 								/></a>
 							<a href=#><img
 									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-instagram.svg"
-									class="social-icon"
+									class="ml-1 mr-1"
 								/></a>
 							<a href=#><img
 									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-youTube.svg"
-									class="social-icon"
+									class="ml-1"
 								/></a>
 						</nav>
 					</div>

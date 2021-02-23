@@ -8,8 +8,7 @@ get_header(); ?>
 	<div class="row">
 		<div class="col-12 mt-4 mb-3">
 			<h2
-				class="alt-font font-weight-bold font-italic fs-md-36 color-secondary"
-				style="font-size:26px"
+				class="title-section"
 			>Estudos bíblicos</h2>
 		</div>
 		<div class="col-12 d-flex flex-wrap justify-content-start">
