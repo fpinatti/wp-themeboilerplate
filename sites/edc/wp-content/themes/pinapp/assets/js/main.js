@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 	const momkid = document.querySelector('.footer-mom-kid');
+	const footer = document.querySelector('.main-footer');
 	window.addEventListener('scroll', function(evt) {
 		if (window.scrollY > pageScroll) {
 			if (pageScroll >= 300) {
@@ -28,11 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			mainBody.classList.remove('scroll-down');
 		}
 		pageScroll = window.scrollY;
-        console.log(momkid.getBoundingClientRect().top - mainBody.getBoundingClientRect().top);
-		// var kidx = (momkid.getBoundingClientRect().bottom) / 10;
-		// kidx = Math.max(0, kidx);
-		// //console.log(kidx);
-		// momkid.style.transform = 'translateX(' + kidx + 'px)';
+		var kidx = (footer.getBoundingClientRect().top - window.innerHeight + 200) / 10;
+		kidx = Math.max(0, kidx);
+		momkid.style.transform = 'translateX(' + (kidx * -1) + 'px)';
 	});
 
 
