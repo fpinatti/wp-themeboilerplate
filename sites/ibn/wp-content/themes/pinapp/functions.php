@@ -15,6 +15,9 @@ function pinapp_script_enqueue() {
 	wp_enqueue_script('curtains', get_template_directory_uri() . '/assets/js/curtains.umd.min.js');
 	wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
 	wp_enqueue_script('rellax', get_template_directory_uri() . '/assets/js/rellax.min.js');
+	wp_enqueue_script('blotter', get_template_directory_uri() . '/assets/js/blotter.min.js');
+	wp_enqueue_script('blotter-rolling', get_template_directory_uri() . '/assets/js/rollingDistortMaterial.js');
+	wp_enqueue_script('blotter-channel', get_template_directory_uri() . '/assets/js/channelSplitMaterial.js');
 	wp_enqueue_script('customjs', get_template_directory_uri() . '/assets/js/main.js');
 	
 }

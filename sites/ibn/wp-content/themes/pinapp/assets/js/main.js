@@ -159,6 +159,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// parallax
 	//var rellax = new Rellax('.rellax');
+	const titles = document.querySelectorAll('.s-title');
+	titles.forEach(title => {
+		var text = new Blotter.Text(title.innerText, {
+			family : 'Playfair Display',
+			size : 26,
+			style: 'italic',
+			weight: 700,
+			paddingLeft: 5,
+			paddingRight: 5,
+			fill : RGBToHex(getComputedStyle(title).color)
+		});
+		console.log(RGBToHex(getComputedStyle(title).color));
+		var material = new Blotter.ChannelSplitMaterial();
+		material.uniforms.uOffset.value = .1;
+		material.uniforms.uApplyBlur.value = true;
+		var blotter = new Blotter(material, { texts : text });
+		var scope = blotter.forText(text);
+		const div = document.createElement('div');
+		title.parentNode.insertBefore(div, title);
+		scope.appendTo(div);
+		div.classList = title.classList;
+		div.classList.remove('sr-only');
+	});
+
+	function RGBToHex(rgb) {
+		// Choose correct separator
+		let sep = rgb.indexOf(",") > -1 ? "," : " ";
+		// Turn "rgb(r,g,b)" into [r,g,b]
+		rgb = rgb.substr(4).split(")")[0].split(sep);
+		
+		let r = (+rgb[0]).toString(16),
+			g = (+rgb[1]).toString(16),
+			b = (+rgb[2]).toString(16);
+		
+		if (r.length == 1)
+			r = "0" + r;
+		if (g.length == 1)
+			g = "0" + g;
+		if (b.length == 1)
+			b = "0" + b;
+		
+		return "#" + r + g + b;
+	}
 
 });
 
