@@ -41,7 +41,8 @@ li {
 	font-style: italic;
     background-image: url(../img/doodle-title.png);
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    background-clip: text;
+	-webkit-background-clip: text;
 	background-size: 300px;
     background-position-y: center;
 	animation-name: title-bg-anim;
@@ -398,24 +399,40 @@ li {
 }
 
 .img-edge-1 img {
+	mask-image: url(../img/horizontal-divider-1.png);
+	mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center bottom;
 	-webkit-mask-image: url(../img/horizontal-divider-1.png);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
     -webkit-mask-position: center bottom;
 }
 .img-edge-horizontal-1 img {
+	mask-image: url(../img/horizontal-divider-1.png);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center bottom;
 	-webkit-mask-image: url(../img/horizontal-divider-1.png);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
     -webkit-mask-position: center bottom;
 }
 .img-edge-2 img {
+	mask-image: url(../img/horizontal-divider-2.png);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center bottom;
 	-webkit-mask-image: url(../img/horizontal-divider-2.png);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
     -webkit-mask-position: center bottom;
 }
 .img-edge-horizontal-2 img {
+	mask-image: url(../img/horizontal-divider-2.png);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center bottom;
 	-webkit-mask-image: url(../img/horizontal-divider-2.png);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
@@ -635,12 +652,6 @@ li {
 		margin-top: 168px;
 	}
 
-	.main-header {
-		/* -webkit-backdrop-filter: blur(10px);
-  		backdrop-filter: blur(10px);
-		background-color: transparent; */
-	}
-
 	.main-footer {
 		flex-wrap: nowrap;
 		.menu-item {
@@ -679,10 +690,14 @@ li {
 	}
 
 	.img-edge-1 img {
+		mask-image: url(../img/vertical-divider-1.png);
+		mask-position: left center;
 		-webkit-mask-image: url(../img/vertical-divider-1.png);
 		-webkit-mask-position: left center;
 	}
 	.img-edge-2 img {
+		mask-image: url(../img/vertical-divider-2.png);
+		mask-position: right center;
 		-webkit-mask-image: url(../img/vertical-divider-2.png);
 		-webkit-mask-position: right center;
 	}
