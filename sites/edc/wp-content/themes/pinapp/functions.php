@@ -13,7 +13,6 @@ function pinapp_script_enqueue() {
 	//js
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
-	wp_enqueue_script('rellax', get_template_directory_uri() . '/assets/js/rellax.min.js');
 	wp_enqueue_script('customjs', get_template_directory_uri() . '/assets/js/main.js');
 	
 }

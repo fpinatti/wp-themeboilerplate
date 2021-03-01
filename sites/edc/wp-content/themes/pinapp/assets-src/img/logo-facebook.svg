@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26">
+  <g id="logo-facebook" transform="translate(0.285 0)">
+    <ellipse id="facebook-back" cx="12.5" cy="13" rx="12.5" ry="13" transform="translate(-0.285 0)" fill="#3a5a99"/>
+    <path id="facebook-facebook" d="M42.129,29H29.767a.767.767,0,0,0-.767.767V42.129a.767.767,0,0,0,.767.767h6.655V37.515H34.611v-2.1h1.811V33.871a2.527,2.527,0,0,1,2.7-2.772,14.834,14.834,0,0,1,1.618.083v1.876h-1.11c-.871,0-1.039.414-1.039,1.021v1.339h2.077l-.27,2.1H38.588V42.9h3.541a.767.767,0,0,0,.767-.767V29.767A.767.767,0,0,0,42.129,29Z" transform="translate(-23.255 -22.93)" fill="#fff"/>
+  </g>
+</svg>
