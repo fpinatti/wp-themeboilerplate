@@ -1,0 +1,28 @@
+{
+  "name": "assets-src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run buildLess",
+    "build": "npm run buildLess && npm run buildCss && npm run buildJs && npm run buildJpg && npm run buildPng && npm run buildSvg && node postBuild",
+    "buildLess": "parcel build css/*.less --out-dir ../assets/css --no-cache",
+    "buildCss": "parcel build css/*.css --out-dir ../assets/css --no-cache",
+    "buildJs": "parcel build js/*.js --out-dir ../assets/js --no-cache",
+    "buildJpg": "parcel build img/*.jpg --out-dir ../assets/img --no-cache",
+    "buildPng": "parcel build img/*.png --out-dir ../assets/img --no-cache",
+    "buildSvg": "parcel build img/*.svg --out-dir ../assets/img --no-cache",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "less": "^4.1.1"
+  }
+}
