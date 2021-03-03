@@ -59,7 +59,14 @@
 					</div>
 					<div class="header-contact d-flex flex-wrap justify-content-center align-items-center align-items-md-start">
 						<span class="fs-12 alt-font mb-2">nossas redes sociais</span>
-						<nav class="text-center w-100">
+						<?php 
+							wp_nav_menu(array(
+								'theme_location' => 'social-top',
+								'container' => false,
+								'menu_class' => 'text-center w-100 p-0 m-0' 
+							));
+						?>
+						<!-- <nav class="text-center w-100">
 							<a href=#><img
 									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.svg"
 									class="mr-1"
@@ -72,7 +79,7 @@
 									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-youTube.svg"
 									class="ml-1"
 								/></a>
-						</nav>
+						</nav> -->
 					</div>
 				</div>
 			</div>

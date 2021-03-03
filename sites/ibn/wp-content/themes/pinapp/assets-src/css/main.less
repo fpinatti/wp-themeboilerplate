@@ -39,15 +39,26 @@ body {
 		.header-phone {
 			opacity: 0;
 		}
-		.top-main-nav {
-			display: flex !important;
+		.main-menu-top-wrapper {
 			position: absolute;
 			top: 0;
 			left: 0;
 			margin-top: 150px;
 			width: 100%;
+			z-index: 1;
+			.header-social-icons-mobile-menu {
+				list-style: none;
+				padding: 0;
+				margin-top: 30px;
+			}
+		}
+		.top-main-nav {
+			display: flex !important;
 			flex-wrap: wrap;
 			padding: 0;
+		}
+		.header-social-icons-mobile-menu {
+			display: flex;
 		}
 	}
 }
@@ -90,6 +101,9 @@ body {
 .header-social-icons {
 	display: none;
 }
+.header-social-icons-mobile-menu {
+	display: none;
+}
 
 .header-top-logo {
 	max-width: 180px;
@@ -110,6 +124,13 @@ body {
 
 .main-footer {
 	background-color: var(--primary);
+}
+
+#menu-social-networks-footer {
+	list-style: none;
+	.menu-item {
+		margin: 0 13px;
+	}
 }
 
 .deco-stripe {
@@ -314,6 +335,13 @@ a {
 	}
 }
 
+.pst-img {
+	img {
+		width: auto;
+		height: auto;
+	}
+}
+
 @media (min-width: 768px) {
 	.blog-card {
 		width: 32%;
@@ -331,6 +359,10 @@ a {
 	/* HEADER */
 	.header-social-icons {
 		width: 100%;
+		.menu-item {
+			list-style: none;
+			margin: 0 6px;
+		}
 	}
 	.header-right-column {
 		text-align: center;

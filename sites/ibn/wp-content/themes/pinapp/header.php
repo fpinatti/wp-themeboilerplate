@@ -32,13 +32,22 @@
 					class="header-top-logo position-relative"
 				/>
 			</a>
-			<?php 
-				wp_nav_menu(array(
-					'theme_location' => 'primary',
-					'container' => false,
-					'menu_class' => 'top-main-nav alt-font font-weight-bold' 
-				));
-			?>
+			<div class="main-menu-top-wrapper">
+				<?php 
+					wp_nav_menu(array(
+						'theme_location' => 'menu-top',
+						'container' => false,
+						'menu_class' => 'top-main-nav alt-font font-weight-bold' 
+					));
+				?>
+				<?php 
+					wp_nav_menu(array(
+						'theme_location' => 'social-top',
+						'container' => false,
+						'menu_class' => 'header-social-icons-mobile-menu' 
+					));
+				?>
+			</div>
 			<div class="header-right-column justify-content-center d-md-flex position-relative pr-3 flex-wrap">
 				<button class="sandwich-icon d-inline-block d-md-none m-0 p-0">
 					<img
@@ -46,30 +55,13 @@
 						class="m-0 mb-3"
 					/>
 				</button>
-				<nav class="header-social-icons d-md-block m-0 p-0 mb-md-3">
-					<a
-						href=#
-						class="mr-2 ml-2"
-					><img
-							width="25"
-							src="<?php echo(get_template_directory_uri()); ?>/assets/img/twitter-alternative.svg"
-						/></a>
-					<a
-						href=#
-						class="mr-2 ml-2"
-					><img
-							width="25"
-							src="<?php echo(get_template_directory_uri()); ?>/assets/img/youtube-alternative.svg"
-						/></a>
-					<a
-						href=#
-						class="mr-2 ml-2"
-					><img
-							width="25"
-							src="<?php echo(get_template_directory_uri()); ?>/assets/img/instagram-alternative.svg"
-						/></a>
-				</nav>
-
+				<?php 
+				wp_nav_menu(array(
+						'theme_location' => 'social-top',
+						'container' => false,
+						'menu_class' => 'header-social-icons d-md-flex m-0 p-0 mb-md-3 justify-content-center align-items-center' 
+					));
+				?>
 				<div class="headline-contact flex-nowrap d-flex">
 					<img
 						width="25"

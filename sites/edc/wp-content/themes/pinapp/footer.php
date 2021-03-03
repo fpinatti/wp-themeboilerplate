@@ -30,7 +30,7 @@
 					'menu_class' => 'footer-menu column-center pt-4 pb-4 pt-md-0 pb-md-0 pl-0 text-center fs-12' 
 				));
 			?>
-			<div class="column-right pt-4 justify-content-center text-white text-center text-md-left pl-5">
+			<div class="column-right pt-4 justify-content-center text-white text-center text-md-left pl-md-5">
 				<span class="mb-3 alt-font d-block fs-14">entre em contato</span>
 				<div class="footer-small-box-columns justify-content-center justify-content-md-start">
 					<div class="footer-small-box-left">
@@ -63,23 +63,14 @@
 				</div>
 			</div>
 			<div class="column-right pt-3 pt-md-0 text-center">
-				<nav
-					class="d-flex flex-nowrap justify-content-center mb-5 pb-3 flex-md-wrap justify-content-md-start d-md-block mb-md-0 pb-md-0">
-					<a
-						href=#
-						class="mr-3 d-flex align-items-center mb-md-4 text-white fs-10"
-					><img
-							src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-instagram.svg"
-							class="mr-2"
-						/> espacodacrianca</a>
-					<a
-						href=#
-						class="d-flex align-items-center text-white fs-10"
-					><img
-							src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.svg"
-							class="mr-2"
-						/> espacodacrianca</a>
-				</nav>
+				<?php 
+					wp_nav_menu(array(
+						'theme_location' => 'social-footer',
+						'container' => false,
+						'menu_class' => 'd-flex flex-nowrap justify-content-center mb-5 pb-3 flex-md-wrap justify-content-md-start d-md-block mb-md-0 pb-md-0 pl-0' 
+					));
+				?>	
+			
 			</div>
 		</div>
 

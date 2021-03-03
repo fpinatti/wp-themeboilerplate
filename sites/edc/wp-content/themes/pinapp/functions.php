@@ -28,8 +28,17 @@ function pinapp_theme_setup() {
 	
 	add_theme_support('menus');
 	
-	register_nav_menu('primary', 'Primary Header Navigation');
-	register_nav_menu('secondary', 'Footer Navigation');
+	register_nav_menus(
+		array(
+			'menu-top' => __( 'Primary', 'Primary Header Navigation' ),
+			'footer' => __( 'Footer', 'Footer Navigation' ),
+			'social-top' => __( 'Social Links Top', 'Social Links Top' ),
+			'social-footer' => __( 'Social Links Footer', 'Social Links Footer' )
+		)
+	);
+
+	// register_nav_menu('primary', 'Primary Header Navigation');
+	// register_nav_menu('secondary', 'Footer Navigation');
 	
 }
 
