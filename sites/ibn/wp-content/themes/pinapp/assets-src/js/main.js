@@ -59,12 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				top: targetSection.getBoundingClientRect().top + window.pageYOffset - 170,
 				behavior: 'smooth'
 			});
-			// targetSection.scrollIntoView({
-			// 	inline: 'nearest',
-			// 	block: 'start',
-			// 	behavior: 'smooth'
-			// });
-			mainHeader.classList.remove('open');
+			mainBody.classList.remove('menu-open');
 		}
 	};
 
@@ -86,9 +81,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 	const btnSandwich = document.querySelector('.sandwich-icon');
 	const mainHeader = document.querySelector('.main-header');
+	const mainBody = document.querySelector('body');
 	const toggleMenu = () => {
 
-		mainHeader.classList.toggle('open');
+		mainBody.classList.toggle('menu-open');
 	};
 
 	btnSandwich.addEventListener('click', toggleMenu);

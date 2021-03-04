@@ -12,27 +12,8 @@
 body {
 	font-family: 'Source Sans Pro', sans-serif;
 	padding-top: 132px;
-}
-
-/* HEADER */
-.top-main-nav {
-	display: none;
-	z-index: 1;
-	padding: 0;
-	margin: 0;
-	li {
-		list-style: none;
-		padding: 0 10px;
-	}
-}
-
-.main-header {
-	z-index: 5000;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	background-color: var(--light);
-	&.open {
+	&.menu-open {
+		overflow-y: hidden;
 		.mobile-menu-cover {
 			display: block;
 		}
@@ -61,6 +42,27 @@ body {
 			display: flex;
 		}
 	}
+}
+
+/* HEADER */
+.top-main-nav {
+	display: none;
+	z-index: 1;
+	padding: 0;
+	margin: 0;
+	li {
+		list-style: none;
+		padding: 0 10px;
+	}
+}
+
+.main-header {
+	z-index: 5000;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: var(--light);
+	
 }
 
 .sandwich-icon {
