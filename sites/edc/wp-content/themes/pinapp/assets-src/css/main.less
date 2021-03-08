@@ -1,3 +1,9 @@
+.responsive(@minWidth; @rules) {
+    @media (min-width: @minWidth) {
+        @rules();
+    }
+}
+
 main {
 	margin-top: 200px;
 }
@@ -300,6 +306,39 @@ li {
 		margin-right: 0;
 	}
 }
+.home-hand-1,
+.home-hand-2 {
+	img {
+		max-width: 100px;
+		object-fit: contain !important;
+		.responsive(800px, {
+			max-width: 150px;
+		});
+		.responsive(1100px, {
+			max-width: 250px;
+		});
+	}
+}
+.home-hand-1 {
+	left: -50px;
+	top: 0;
+	transform: translateY(-70px);
+	.responsive(800px, {
+		left: 0;
+	});
+}
+.home-hand-2 {
+	right: 0;
+	bottom: 0;
+	transform: translateY(130px);
+}
+
+// .hands-block {
+// 	overflow-x: hidden;
+// 	.responsive(1100px, {
+// 		overflow-x: auto;
+// 	});
+// }
 
 /* OVERALL */
 :root {
