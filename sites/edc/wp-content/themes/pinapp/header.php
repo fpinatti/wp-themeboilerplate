@@ -8,7 +8,6 @@
 		name="description"
 		content="<?php bloginfo('description'); ?>"
 	>
-	<?php wp_head(); ?>
 	<link
 		rel="preconnect"
 		href="https://fonts.gstatic.com"
@@ -17,10 +16,12 @@
 		href="https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@200;400;700;900&display=swap"
 		rel="stylesheet"
 	>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-
+	<?php wp_body_open(); ?>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'twentytwentyone' ); ?></a>
 	<!-- EDC markup -->
 	<header class="main-header">
 		<div class="max-width-wrapper">

@@ -6,12 +6,15 @@
   "scripts": {
     "dev": "npm run buildLess",
     "build": "npm run buildLess && npm run buildCss && npm run buildJs && npm run buildJpg && npm run buildPng && npm run buildSvg && node postBuild",
+    "watch": "npm run watchLess && npm run watchJs",
     "buildLess": "parcel build css/*.less --out-dir ../assets/css --no-content-hash",
     "buildCss": "parcel build css/*.css --out-dir ../assets/css --no-content-hash",
     "buildJs": "parcel build js/*.js --out-dir ../assets/js --no-content-hash",
-    "buildJpg": "",
+    "buildJpg": "parcel build img/*.jpg --out-dir ../assets/img --no-content-hash",
     "buildPng": "parcel build img/*.png --out-dir ../assets/img --no-content-hash",
     "buildSvg": "parcel build img/*.svg --out-dir ../assets/img --no-content-hash",
+    "watchLess": "parcel watch css/*.less --out-dir ../assets/css",
+    "watchJs": "parcel watch js/*.js --out-dir ../assets/js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

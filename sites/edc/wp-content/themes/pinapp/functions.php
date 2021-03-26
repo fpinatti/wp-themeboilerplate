@@ -83,6 +83,7 @@ add_theme_support( 'custom-line-height' );
 add_theme_support( 'experimental-link-color' );
 // Add support for experimental cover block spacing.
 add_theme_support( 'custom-spacing' );
+add_theme_support( 'title-tag' );
 
 /*
 	==========================================

@@ -59,16 +59,17 @@ li {
 	color: var(--gray-dark);
 	margin-top: 20px;
 	font-style: italic;
-    background-image: url(../img/doodle-title.png);
+    background-image: url(../img/texture-3476002_1280.jpg);
     -webkit-text-fill-color: transparent;
     background-clip: text;
 	-webkit-background-clip: text;
-	background-size: 300px;
+	background-size: 200px;
     background-position-y: center;
 	animation-name: title-bg-anim;
 	animation-duration: 20s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+	-webkit-text-stroke: thin;
 }
 @keyframes title-bg-anim {
 	0% {
@@ -490,6 +491,9 @@ li {
 		width: 100%;
 		height: 100%;
 	}
+	&.is-style-rounded img {
+		border-radius: 20px;
+	}
 	img {
 		object-fit: cover;
 	}
@@ -589,15 +593,15 @@ li {
 		margin-left: 0;
 		height: 100%;
 	}
-	.wp-block-column:nth-child(2n) {
-		margin-left: 2em;
-	}
+	// .wp-block-column:nth-child(2n) {
+	// 	margin-left: 2em;
+	// }
 	.wp-block-latest-posts {
 		&.is-grid li {
 			margin: 0 8px;
 		}
 		&.columns-3 li {
-			width: calc(33.33333% - .83333em);
+			width: calc(32%);
 		}
 	}
 	.posts_home {
@@ -626,7 +630,7 @@ li {
     	flex-wrap: wrap;
 	}
 	.title-section {
-		font-size: 40px;
+		font-size: 32px;
 	}
 	body {
 		&.scroll-down { 
