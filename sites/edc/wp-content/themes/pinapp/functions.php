@@ -235,24 +235,3 @@ function pinapp_get_terms( $postID, $term ){
 	return $output;
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
