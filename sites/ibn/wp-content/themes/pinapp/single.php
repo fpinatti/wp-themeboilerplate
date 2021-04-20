@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container blog-single">
+<main class="container blog-single">
 	<div class="row">
 		<div class="col-12">
 		<?php 
@@ -36,6 +36,6 @@
 	</div>
 	</div>
 	
-</div>
+</main>
 
 <?php get_footer(); ?>

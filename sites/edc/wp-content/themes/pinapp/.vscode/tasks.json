@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "watch",
+			"path": "assets-src/",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: watch - assets-src",
+			"detail": "npm run watchLess && npm run watchJs"
+		}
+	]
+}

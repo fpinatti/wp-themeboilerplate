@@ -13,7 +13,7 @@
 		href="https://fonts.gstatic.com"
 	>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@200;400;700;900&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@200;400;700;900&family=Just+Another+Hand&display=swap"
 		rel="stylesheet"
 	>
 	<?php wp_head(); ?>
@@ -52,14 +52,14 @@
 							class="mt-md-2 mr-2"
 						/>
 						<div>
-							<span class="fs-12 alt-font">estamos no whatsapp</span><br />
+							<span class="fs-22 alt-font">estamos no whatsapp</span><br />
 							<span class="fs-14">19. 91322.2312</span>
 						</div>
 
 
 					</div>
 					<div class="header-contact d-flex flex-wrap justify-content-center align-items-center align-items-md-start">
-						<span class="fs-12 alt-font mb-2">nossas redes sociais</span>
+						<span class="fs-22 alt-font mb-2">nossas redes sociais</span>
 						<?php 
 							wp_nav_menu(array(
 								'theme_location' => 'social-top',

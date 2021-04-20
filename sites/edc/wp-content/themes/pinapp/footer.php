@@ -31,7 +31,7 @@
 				));
 			?>
 			<div class="column-right pt-4 justify-content-center text-white text-center text-md-left pl-md-5">
-				<span class="mb-3 alt-font d-block fs-14">entre em contato</span>
+				<span class="mb-3 alt-font d-block fs-22">entre em contato</span>
 				<div class="footer-small-box-columns justify-content-center justify-content-md-start">
 					<div class="footer-small-box-left">
 						<a href=#>
@@ -42,10 +42,10 @@
 						</a>
 					</div>
 					<div class="footer-small-box-right mb-4 fs-10 fs-md-11">
-						<span class="font-weight-bold d-block">Assistência Social</span>
-						<span class="mb-1 d-block">19 3829-1866</span>
-						<span class="font-weight-bold d-block">Secretaria e Administração</span>
+						<span class="font-weight-bold d-block">Assistente Social</span>
 						<span class="mb-1 d-block">19 3829-2537</span>
+						<span class="font-weight-bold d-block">Secretaria e Administração</span>
+						<span class="mb-1 d-block">19 3829-1896</span>
 					</div>
 				</div>
 				<div class="footer-small-box-columns mb-4 justify-content-center justify-content-md-start">
@@ -56,8 +56,8 @@
 							/></a>
 					</div>
 					<div class="footer-small-box-right fs-10 fs-md-12">
-						<span class="d-block">Avenida Altino Gouveia, 977</span>
-						<span class="d-block">Jardim Pinheiros</span>
+						<span class="d-block">Av. Dr. Altino Gouveia, 977</span>
+						<span class="d-block">Jd. Pinheiros</span>
 						<span class="d-block">Valinhos/SP</span>
 					</div>
 				</div>

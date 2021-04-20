@@ -24,8 +24,9 @@ li {
   font-size: 0.85rem;
   line-height: 1.6rem;
 }
-.alt-font {
-  font-family: 'Concert One', cursive;
+.alt-font,
+.wp-block-latest-posts a {
+  font-family: 'Just Another Hand', cursive;
 }
 #menu-social-networks-top .menu-item {
   list-style: none;
@@ -37,24 +38,16 @@ li {
   text-align: left;
 }
 .title-section {
-  font-size: 32px;
-  font-family: 'Concert One', cursive;
-  display: flex;
-  align-items: baseline;
+  background-image: url(title-underline.2f4ccb9a.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
   color: var(--gray-dark);
-  margin-top: 20px;
-  font-style: italic;
-  background-image: url(texture-3476002_1280.959008f1.jpg);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-size: 200px;
-  background-position-y: center;
-  animation-name: title-bg-anim;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  -webkit-text-stroke: thin;
+  display: inline-block;
+  font-size: 32px;
+  font-family: 'Just Another Hand', cursive;
+  margin: 10px 0 25px;
+  padding: 10px 13px 8px 2px;
 }
 @keyframes title-bg-anim {
   0% {
@@ -65,9 +58,10 @@ li {
   }
 }
 .subtitle {
-  font-size: 26px;
-  font-family: 'Concert One', cursive;
+  font-size: 36px;
+  font-family: 'Just Another Hand', cursive;
   color: var(--gray-dark);
+  line-height: 1;
 }
 /* HEADER */
 .top-main-nav {
@@ -87,16 +81,16 @@ li {
   --fill: #EB5050;
 }
 .top-main-nav .menu-item:nth-child(2) {
-  --fill: #36E978;
+  --fill: #067730;
 }
 .top-main-nav .menu-item:nth-child(3) {
   --fill: #4E4EF5;
 }
 .top-main-nav .menu-item:nth-child(4) {
-  --fill: #FEED03;
+  --fill: #9c9200;
 }
 .top-main-nav .menu-item:nth-child(5) {
-  --fill: #1BEBA4;
+  --fill: #4fa286;
 }
 .top-main-nav .menu-item:nth-child(6) {
   --fill: #DC50EB;
@@ -254,6 +248,15 @@ li {
 .footer-small-box-left {
   width: 100%;
 }
+.wp-block-latest-posts a {
+  margin: 9px 0 0;
+  display: block;
+  font-size: 28px;
+  color: var(--gray-dark);
+}
+.wp-block-latest-posts .wp-block-latest-posts__post-date {
+  line-height: 1;
+}
 .wp-block-latest-posts.is-grid li {
   width: 100%;
   margin: 0 0 20px;
@@ -270,6 +273,7 @@ li {
 }
 .home-hand-1 img,
 .home-hand-2 img {
+  width: 500px;
   max-width: 100px;
   object-fit: contain !important;
 }
@@ -376,7 +380,8 @@ li {
   font-family: 'Concert One', cursive;
   font-size: 18px;
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
   color: #fff;
   background-color: var(--danger);
   border-color: #A20B0B;
@@ -447,7 +452,33 @@ li {
 }
 .rounded,
 .wp-block-image.rounded img {
-  border-radius: 1rem!important;
+  border-radius: 1rem !important;
+}
+.zi-1 {
+  z-index: 1;
+}
+.wpcf7 form {
+  --status-color: var(--gray-dark);
+}
+.wpcf7 form.invalid {
+  --status-color: var(--danger);
+}
+.wpcf7 form.sent {
+  --status-color: var(--cyan);
+}
+.wpcf7 form .wpcf7-response-output {
+  padding: 6px;
+  margin: 10px 0;
+  border-radius: 7px;
+  border: 0;
+  border-width: 1px;
+  background-color: var(--status-color);
+  color: var(--light);
+  font-size: 12px;
+  display: inline-block;
+}
+.wpcf7 form label br {
+  display: none;
 }
 /* instagram plugin */
 .sb_instagram_header {
@@ -460,11 +491,15 @@ li {
   width: 100%;
   height: 100%;
 }
+#sb_instagram img {
+  padding: 3px !important;
+}
 #sb_instagram .sbi_photo {
   background-image: none !important;
   height: 100% !important;
 }
 #sb_instagram .sbi_photo img {
+  border-radius: 12px;
   width: 100%;
   height: 100%;
   display: block !important;
@@ -512,6 +547,18 @@ li {
 .fs-14 {
   font-size: 14px;
 }
+.fs-22 {
+  font-size: 22px;
+}
+.grid-gallery .wp-block-gallery .blocks-gallery-item,
+.grid-gallery .blocks-gallery-grid .blocks-gallery-item {
+  flex-grow: 0;
+}
+.grid-gallery .wp-block-gallery .blocks-gallery-item img,
+.grid-gallery .blocks-gallery-grid .blocks-gallery-item img {
+  border-radius: 8px;
+  max-height: 140px;
+}
 @media (min-width: 600px) and (max-width: 781px) {
   .wp-block-column:nth-child(2n) {
     margin-left: 0;
@@ -525,6 +572,17 @@ li {
   .banner-home .wp-block-column {
     flex-basis: 100% !important;
     margin-left: 0 !important;
+  }
+  .wp-block-group.single-column-news .h-md-280 {
+    height: auto;
+  }
+  .wp-block-group.single-column-news .wp-block-latest-posts.is-grid li {
+    margin: 0;
+  }
+  .wp-block-group.single-column-news .wp-post-image {
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
   }
   .wp-block-column:not(:first-child) {
     margin-left: 0;
@@ -582,7 +640,7 @@ li {
   }
   .rounded-md,
   .wp-block-image.rounded-md img {
-    border-radius: 1rem!important;
+    border-radius: 1rem !important;
   }
   .header-top-logo {
     max-width: 150px;
