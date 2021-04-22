@@ -7,9 +7,9 @@ get_header(); ?>
 <main class="container blog-wrapper">
 	<div class="row">
 		<div class="col-12 mt-4 mb-3">
-			<h2
+			<h1
 				class="title-section"
-			>Estudos bíblicos</h2>
+			>Blog</h1>
 		</div>
 		<div class="col-12 d-flex flex-wrap justify-content-start">
 			<?php 
