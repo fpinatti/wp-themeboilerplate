@@ -67,6 +67,9 @@ li {
   width: 70px;
   height: 70px;
 }
+.quote-dark {
+  background-color: #c6eeff;
+}
 /* HEADER */
 .top-main-nav {
   background-color: var(--gray-dark);
@@ -688,9 +691,9 @@ li {
     height: 50px;
     width: 100%;
     text-align: center;
-    background-image: url(roof.147d6711.png);
+    background-image: url(roof.ce85fe89.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     background-position: center bottom;
     transition: all 0.3s;
   }

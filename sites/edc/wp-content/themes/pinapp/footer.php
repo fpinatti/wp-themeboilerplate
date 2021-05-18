@@ -6,12 +6,19 @@
 			<div class="align-items-end d-flex">
 				<img
 					class="footer-mom-kid"
+					alt="ícone bebê nos braços da mãe"
 					src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-kid.svg"
 				/>
-				<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-mommy.svg" />
+				<img 
+					src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-mommy.svg" 
+					alt="ícone mãe com bebê nos braços"
+				/>
 			</div>
 			<div>
-				<img src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-family.svg" />
+				<img 
+					src="<?php echo(get_template_directory_uri()); ?>/assets/img/footer-family.svg" 
+					alt="ícone de uma família"
+				/>
 			</div>
 		</div>
 		<div
@@ -20,7 +27,7 @@
 				<img
 					class="footer-nav logo-footer ml-4 mr-4 mt-md-1"
 					src="<?php header_image(); ?>"
-					alt=""
+					alt="logotipo espaço da criança pastora Vanda Nicolau"
 				/>
 			</a>
 			<?php 
@@ -38,6 +45,7 @@
 							<img
 								src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-whatsApp.svg"
 								class="mb-2 mr-md-2"
+								alt="logotipo whatsapp"
 							/>
 						</a>
 					</div>
@@ -53,6 +61,7 @@
 						<a href=#><img
 								src="<?php echo(get_template_directory_uri()); ?>/assets/img/location.svg"
 								class="mb-2 mr-md-2"
+								alt="ícone localização"
 							/></a>
 					</div>
 					<div class="footer-small-box-right fs-10 fs-md-12">

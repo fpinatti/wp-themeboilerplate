@@ -31,19 +31,21 @@
 					<img
 						class="header-top-logo"
 						src="<?php header_image(); ?>"
-						alt=""
+						alt="logotipo espaço da criança pastora Vanda Nicolau"
 					/>
 				</a>
 				<a href=#>
 					<img
 						src="<?php echo(get_template_directory_uri()); ?>/assets/img/hamburguer.svg"
 						class="menu-mobile-icon icon-sandwich d-md-none position-absolute"
+						alt="ícone hamburguer para dispositivos mobile"
 					/>
 				</a>
 				<a href=#>
 					<img
 						src="<?php echo(get_template_directory_uri()); ?>/assets/img/back-button.svg"
 						class="menu-mobile-icon icon-sandwich-back d-md-none position-absolute"
+						alt="ícone de fechar do menu"
 					/>
 				</a>
 				<div class="header-right-column">
@@ -51,6 +53,7 @@
 						<img
 							src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-whatsApp.svg"
 							class="mt-md-2 mr-2"
+							alt="logotipo whatsapp"
 						/>
 						<div>
 							<span class="fs-22 alt-font">estamos no whatsapp</span><br />
@@ -68,20 +71,6 @@
 								'menu_class' => 'text-center w-100 p-0 m-0' 
 							));
 						?>
-						<!-- <nav class="text-center w-100">
-							<a href=#><img
-									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-facebook.svg"
-									class="mr-1"
-								/></a>
-							<a href=#><img
-									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-instagram.svg"
-									class="ml-1 mr-1"
-								/></a>
-							<a href=#><img
-									src="<?php echo(get_template_directory_uri()); ?>/assets/img/logo-youTube.svg"
-									class="ml-1"
-								/></a>
-						</nav> -->
 					</div>
 				</div>
 			</div>
