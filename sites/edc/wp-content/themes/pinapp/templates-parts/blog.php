@@ -9,7 +9,7 @@ get_header(); ?>
 		<div class="col-12 mt-4 mb-3">
 			<h1
 				class="title-section"
-			>Blog</h1>
+			>Novidades</h1>
 		</div>
 		<div class="col-12 d-flex flex-wrap justify-content-start">
 			<?php 

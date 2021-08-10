@@ -12,7 +12,7 @@ function pinapp_script_enqueue() {
 	wp_enqueue_style('customstyle', get_template_directory_uri() . '/assets/css/main.css');
 	//js
 	wp_enqueue_script('jquery');
-	wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
+	wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js');
 	wp_enqueue_script('customjs', get_template_directory_uri() . '/assets/js/main.js');
 	
 }

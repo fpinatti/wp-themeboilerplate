@@ -12,7 +12,7 @@
 			<article
 				id="post-<?php the_ID(); ?>"
 				<?php 
-					$classes = array('blog-page');
+					$classes = array('blog-page', 'p-4');
 					$customClass = get_post_custom_values($key = 'custom-css');
 					if ($customClass) {
 						$classes = array_merge(get_post_custom_values($key = 'custom-css'), $classes);

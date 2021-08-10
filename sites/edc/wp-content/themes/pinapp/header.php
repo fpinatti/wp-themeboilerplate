@@ -57,7 +57,11 @@
 						/>
 						<div>
 							<span class="fs-22 alt-font">estamos no whatsapp</span><br />
-							<span class="fs-14">19. 91322.2312</span>
+							<span class="fs-14">
+								<a href="https://api.whatsapp.com/send?phone=+55(19)3829-2537" target="_blank">
+									19 3829.2537
+								</a>
+							</span>
 						</div>
 
 

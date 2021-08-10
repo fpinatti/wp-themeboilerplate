@@ -65,17 +65,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 
-	//make gallery open bs modal
-	const galleryItems = document.querySelectorAll('.grid-gallery a');
-	galleryItems.forEach(item => {
-		console.log(item);
-		item.addEventListener('click', onClickGalleryItem);
-	});
+	
+	// const galleryItems = document.querySelectorAll('.grid-gallery a');
+	// galleryItems.forEach(item => {
+	// 	//console.log(item);
+	// 	item.addEventListener('click', onClickGalleryItem);
+	// });
 
-	const onClickGalleryItem = (evt) => {
-		console.log(evt.target);
-		evt.preventDefault();
-	};
+	// const onClickGalleryItem = (evt) => {
+	// 	//console.log(evt.target);
+	// 	evt.preventDefault();
+	// };
 
 
 	//get latest video
@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		.then(response => response.json())
 		.then(json => {
 			var videoId = json.items[0].snippet.resourceId.videoId;
-			console.log(videoId)
 			lastVideoTitle.innerText = json.items[0].snippet.title;
 			lastVideoWrapper.innerHTML = `<iframe width="100%" height="100%" 
 			src="https://www.youtube-nocookie.com/embed/${videoId}" 
@@ -96,6 +95,26 @@ document.addEventListener("DOMContentLoaded", function () {
 			gyroscope; picture-in-picture" 
 			allowfullscreen></iframe>`;
 
-		});
+	});
 
+	//make gallery open bs modal
+	const onClickGalleryItem = (evt) => {
+		const modal = document.querySelector('#modal');
+		modal.querySelector('.modal-body').innerHTML = `<img src="${evt.currentTarget.getAttribute('data-img')}" />`;
+		evt.preventDefault();
+	};
+
+	const galleryItems = document.querySelectorAll('.wp-block-gallery li a');
+	galleryItems.forEach(item => {
+		item.setAttribute('data-bs-toggle', 'modal');
+		const imgFile = item.getAttribute('href')
+		item.setAttribute('href', '#modal');
+		item.setAttribute('data-img', imgFile);
+		item.addEventListener('click', onClickGalleryItem);
+	});
+
+});
+	
+jQuery(document).ready(function( $ ) {
+	$('[data-toggle="tooltip"]').tooltip();
 });

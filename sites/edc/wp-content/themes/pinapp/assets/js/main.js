@@ -178,19 +178,16 @@ document.addEventListener("DOMContentLoaded", function () {
     filename = filename.split('.');
     filename = filename[0] + '-md.' + filename[1];
     return pathname + '/' + filename;
-  } //make gallery open bs modal
-
-
-  var galleryItems = document.querySelectorAll('.grid-gallery a');
-  galleryItems.forEach(function (item) {
-    console.log(item);
-    item.addEventListener('click', onClickGalleryItem);
-  });
-
-  var onClickGalleryItem = function onClickGalleryItem(evt) {
-    console.log(evt.target);
-    evt.preventDefault();
-  }; //get latest video
+  } // const galleryItems = document.querySelectorAll('.grid-gallery a');
+  // galleryItems.forEach(item => {
+  // 	//console.log(item);
+  // 	item.addEventListener('click', onClickGalleryItem);
+  // });
+  // const onClickGalleryItem = (evt) => {
+  // 	//console.log(evt.target);
+  // 	evt.preventDefault();
+  // };
+  //get latest video
 
 
   var lastVideoWrapper = document.querySelector('.latestVideo');
@@ -200,10 +197,27 @@ document.addEventListener("DOMContentLoaded", function () {
     return response.json();
   }).then(function (json) {
     var videoId = json.items[0].snippet.resourceId.videoId;
-    console.log(videoId);
     lastVideoTitle.innerText = json.items[0].snippet.title;
     lastVideoWrapper.innerHTML = "<iframe width=\"100%\" height=\"100%\" \n\t\t\tsrc=\"https://www.youtube-nocookie.com/embed/".concat(videoId, "\" \n\t\t\tframeborder=\"0\" allow=\"accelerometer; \n\t\t\tautoplay; clipboard-write; encrypted-media; \n\t\t\tgyroscope; picture-in-picture\" \n\t\t\tallowfullscreen></iframe>");
+  }); //make gallery open bs modal
+
+  var onClickGalleryItem = function onClickGalleryItem(evt) {
+    var modal = document.querySelector('#modal');
+    modal.querySelector('.modal-body').innerHTML = "<img src=\"".concat(evt.currentTarget.getAttribute('data-img'), "\" />");
+    evt.preventDefault();
+  };
+
+  var galleryItems = document.querySelectorAll('.wp-block-gallery li a');
+  galleryItems.forEach(function (item) {
+    item.setAttribute('data-bs-toggle', 'modal');
+    var imgFile = item.getAttribute('href');
+    item.setAttribute('href', '#modal');
+    item.setAttribute('data-img', imgFile);
+    item.addEventListener('click', onClickGalleryItem);
   });
+});
+jQuery(document).ready(function ($) {
+  $('[data-toggle="tooltip"]').tooltip();
 });
 },{}],"C:/Users/Pinatti/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -233,7 +247,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53850" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53562" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
