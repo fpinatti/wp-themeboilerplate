@@ -8,7 +8,8 @@
 					'menu_class' => 'd-flex justify-content-center align-items-center mb-3 p-0' 
 				));
 			?>
-			Av das Nações, 100 – Valinhos – SP – Brasil
+			Av. Dr. Altíno Gouvêia, 967 - Jardim Pinheiros<br />
+			Valinhos/SP – Brasil
 		</div>
 
 	</footer>

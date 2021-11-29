@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	//HOME
 	var btnKnowMoreChurch = document.querySelector('.btn-know-more-church a');
+	var btnMeetings = document.querySelector('.btn-meetings');
 	onClickKnowMore = function () {
 		var hiddenSections = document.querySelectorAll('.know-more-section');
 		for (let idx = 0; idx < hiddenSections.length; ++idx) {
@@ -11,17 +12,31 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (btnKnowMoreChurch) {
 		btnKnowMoreChurch.addEventListener('click', onClickKnowMore);
 	}
+	btnMeetings.addEventListener('click', (evt) => {
+		evt.preventDefault();
+		const targetSection = document.querySelector('#culto');
+		scrollToSection(targetSection);
+	});
 
-	//GALLERY
-	var ministryGrid = document.querySelectorAll('.ministry-grid a');
-	for (let idx = 0; idx < ministryGrid.length; ++idx) {
-		ministryGrid[idx].setAttribute('data-toggle', 'modal');
-		ministryGrid[idx].setAttribute('data-target', ministryGrid[idx].getAttribute('href'));
-	}
+	// ministry
+	const setMinistryContent = (element) => {
+		console.log(element);
+		const ministryModal = document.querySelector('.modal');
+		const cloneContent = document.querySelector(element);
+		const modalBody = ministryModal.querySelector('.modal-body');
+		modalBody.innerHTML = cloneContent.innerHTML;
+	};
+	var ministryBtns = document.querySelectorAll('.ministry-grid button');
+	ministryBtns.forEach((btn) => {
+		btn.addEventListener('click', (evt) => {
+			setMinistryContent(`.${evt.target.getAttribute('data-content')}`);
+		});
+	});
+
 
 	//latest video
 	var latVideoWrapper = document.querySelector('.latestVideo');
-	var myRequest = new Request('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC6kD6-RCkdyeotrh6dMDW3Q&maxResults=1&order=date&type=video&key=AIzaSyCwUFQ5c-XkVxT5daJwrVohk4h6pCjUgdA');
+	var myRequest = new Request('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC6kD6-RCkdyeotrh6dMDW3Q&maxResults=1&order=date&type=video&key=AIzaSyBXAU2CexSpb8XntJHoEaGREhrPmx2OXa0');
 	fetch(myRequest)
 		.then(response => response.json())
 		.then(json => {
@@ -46,6 +61,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	//MENU
+	var scrollToSection = (targetSection) => {
+		window.scrollTo({
+			top: targetSection.getBoundingClientRect().top + window.pageYOffset - 170,
+			behavior: 'smooth'
+		});
+	};
+
 	var onClickMenuItem = function (evt) {
 		var tSection = evt.target.getAttribute('data-section');
 		var targetSection = document.querySelector('#' + tSection);
@@ -54,11 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (tSection === 'ministerios') {
 				btnKnowMoreChurch.dispatchEvent(new MouseEvent('click'));
 			}
-
-			window.scrollTo({
-				top: targetSection.getBoundingClientRect().top + window.pageYOffset - 170,
-				behavior: 'smooth'
-			});
+			scrollToSection(targetSection);
 			mainBody.classList.remove('menu-open');
 		}
 	};
@@ -123,23 +141,25 @@ document.addEventListener('DOMContentLoaded', function () {
 		pictureElement.className = img.parentNode.classList.toString();
 		source1Element.srcset = src;
 		source1Element.media = '(max-width: 767px)';
-		source2Element.srcset = getLargeImg(src);
+		// source2Element.srcset = getLargeImg(src);
+		source2Element.srcset = src;
 		source2Element.media = '(min-width: 768px)';
 		imgElement.src = src;
 		imgElement.alt = img.getAttribute('alt');
+		imgElement.setAttribute('loading', 'lazy');
 		pictureElement.appendChild(source1Element);
 		pictureElement.appendChild(source2Element);
 		pictureElement.appendChild(imgElement);
 		img.parentNode.replaceWith(pictureElement);
 	});
 
-	function getLargeImg(src) {
-		let filename = src.substring(src.lastIndexOf('/')+1);
-		let pathname = src.substring(0,src.lastIndexOf('/'));
-		filename = filename.split('.');
-		filename = filename[0] + '-md.' + filename[1];
-		return pathname + '/' + filename;
-	}
+	// function getLargeImg(src) {
+	// 	let filename = src.substring(src.lastIndexOf('/')+1);
+	// 	let pathname = src.substring(0,src.lastIndexOf('/'));
+	// 	filename = filename.split('.');
+	// 	filename = filename[0] + '-md.' + filename[1];
+	// 	return pathname + '/' + filename;
+	// }
 
 
 });
