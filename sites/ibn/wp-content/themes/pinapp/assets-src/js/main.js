@@ -12,11 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (btnKnowMoreChurch) {
 		btnKnowMoreChurch.addEventListener('click', onClickKnowMore);
 	}
-	btnMeetings.addEventListener('click', (evt) => {
-		evt.preventDefault();
-		const targetSection = document.querySelector('#culto');
-		scrollToSection(targetSection);
-	});
+	if (btnMeetings) {
+		btnMeetings.addEventListener('click', (evt) => {
+			evt.preventDefault();
+			const targetSection = document.querySelector('#culto');
+			scrollToSection(targetSection);
+		});
+	}
 
 	// ministry
 	const setMinistryContent = (element) => {
@@ -40,14 +42,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	fetch(myRequest)
 		.then(response => response.json())
 		.then(json => {
-			var videoId = json.items[0].id.videoId;
-			latVideoWrapper.innerHTML = `<iframe width="100%" height="315" 
-			src="https://www.youtube-nocookie.com/embed/${videoId}" 
-			frameborder="0" allow="accelerometer; 
-			autoplay; clipboard-write; encrypted-media; 
-			gyroscope; picture-in-picture" 
-			allowfullscreen></iframe>`;
-
+			if (!json.error) {
+				var videoId = json?.items[0]?.id?.videoId;
+				latVideoWrapper.innerHTML = `<iframe width="100%" height="315" 
+				src="https://www.youtube-nocookie.com/embed/${videoId}" 
+				frameborder="0" allow="accelerometer; 
+				autoplay; clipboard-write; encrypted-media; 
+				gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>`;
+			}
 		});
 
 	var pageHash = window.location.hash;
